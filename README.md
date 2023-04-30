@@ -33,7 +33,7 @@ jobs:
       - uses: actions/checkout@v1
       - uses: actions/setup-node@v1
         with:
-          node-version: 10
+          node-version: 18.x
       - run: npm install
       - run: npm test
       - id: publish
@@ -42,7 +42,7 @@ jobs:
           token: ${{ secrets.NPM_TOKEN }}
       - if: steps.publish.outputs.type != 'none'
         name: Update Node-Red flow-library
-        uses: BigThunderSR/update-package-node-red-flow-library-fork-action@v1.0.5
+        uses: BigThunderSR/update-package-node-red-flow-library-fork-action@v1.1.0
         continue-on-error: true
         with:
           package-name: 'node-red-contrib-onstar2'
