@@ -1,33 +1,29 @@
 {
-  "name": "update-package-node-red-flow-library-action",
+  "name": "update-package-node-red-flow-library-action-fork",
   "version": "1.0.5",
-  "description": "Update or add a Node-Red package on the Node-Red flow library (flows.nodered.org).",
+  "description": "Update or add a Node-RED package on the Node-RED flow library (flows.nodered.org).",
   "main": "index.js",
   "keywords": [
     "node-red",
     "flow-library"
   ],
-  "homepage": "https://github.com/Zehir/update-package-node-red-flow-library-action",
+  "homepage": "https://github.com/BigThunderSR/update-package-node-red-flow-library-action",
   "bugs": {
-    "url": "https://github.com/Zehir/update-package-node-red-flow-library-action/issues/"
+    "url": "https://github.com/BigThunderSR/update-package-node-red-flow-library-action/issues/"
   },
   "license": "MIT",
   "author": {
-    "name": "Zehir",
-    "email": "zehir@zorim.fr",
-    "url": "https://github.com/Zehir"
+    "name": "BigThunderSR",
+    "email": "bigthundersr@outlook.com",
+    "url": "https://github.com/BigThunderSR"
   },
   "maintainers": [
     {
-      "name": "Zehir",
-      "email": "zehir@zorim.fr",
-      "url": "https://github.com/Zehir"
+      "name": "BigThunderSR",
+      "email": "bigthundersr@outlook.com",
+      "url": "https://github.com/BigThunderSR"
     }
   ],
-  "funding": {
-    "type": "individual",
-    "url": "https://github.com/sponsors/Zehir"
-  },
   "dependencies": {
     "@actions/core": "^1.6.0",
     "@actions/github": "^5.0.0",
