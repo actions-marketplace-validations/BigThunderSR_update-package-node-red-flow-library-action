@@ -2,6 +2,8 @@
 
 Update or add a Node-Red package on the Node-Red flow library (flows.nodered.org).
 
+This is an updated version of [Zehir/update-package-node-red-flow-library-action](https://github.com/Zehir/update-package-node-red-flow-library-action).
+
 ## Inputs
 
 ### `package-name`
@@ -40,9 +42,9 @@ jobs:
           token: ${{ secrets.NPM_TOKEN }}
       - if: steps.publish.outputs.type != 'none'
         name: Update Node-Red flow-library
-        uses: Zehir/update-package-node-red-flow-library-action@v1.0.5
+        uses: BigThunderSR/update-package-node-red-flow-library-fork-action@v1.0.5
         continue-on-error: true
         with:
-          package-name: 'node-red-contrib-deconz'
+          package-name: 'node-red-contrib-onstar2'
 
 ```
