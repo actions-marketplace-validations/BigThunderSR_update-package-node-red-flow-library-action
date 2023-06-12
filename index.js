@@ -1,7 +1,7 @@
 const core = require('@actions/core');
 const github = require('@actions/github');
-//const got = require('got');
-import got from 'got';
+const got = require('got');
+//import got from 'got';
 const {parse} = require("node-html-parser");
 const {CookieJar} = require('tough-cookie');
 
