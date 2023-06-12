@@ -1,1 +1,0 @@
-{"version":"1.1.1","name":"update-package-node-red-flow-library-action-fork","dependencies":{"@actions/core":{"version":"1.10.0"},"@actions/github":{"version":"5.1.1"},"got":{"version":"12.6.1"},"node-fetch":{"version":"2.6.7"},"node-html-parser":{"version":"6.1.5"},"tough-cookie":{"version":"4.1.3"}}}
