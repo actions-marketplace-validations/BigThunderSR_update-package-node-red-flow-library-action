@@ -10,7 +10,7 @@ outputs:
   result:
     description: 'The result of update'
 runs:
-  using: 'node16'
+  using: 'node20'
   main: 'index.js'
 branding:
   color: 'red'
