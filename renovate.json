@@ -9,14 +9,28 @@
   ],
   "packageRules": [
     { 
-     "matchPackagePatterns": ["npm"],
-     "labels": ["javascript"],
-     "matchPackagePatterns": ["github-actions"],
-     "labels": ["github_actions"],
+     "matchManagers": ["npm"],
+     "addLabels": ["javascript"]
+    },
+    {
+     "matchLanguages":["js"],
+     "addLabels": ["javascript"]
+    },
+    {
+     "matchManagers": ["github-actions"],
+     "addLabels": ["github_actions"]
+    },
+    {
+     "matchManagers": ["dockerfile"],
+     "addLabels": ["dockerfile"]
+    },
+    {
      "matchPackagePatterns": ["dockerfile"],
-     "labels": ["dockerfile"],
-     "matchPackagePatterns": ["nvm"],
-     "labels": ["nvm"] 
-    }
+     "addLabels": ["dockerfile"]
+    },
+    {
+     "matchManagers": ["nvm"],
+     "addLabels": ["nvm"] 
+    }  
   ]
 }
