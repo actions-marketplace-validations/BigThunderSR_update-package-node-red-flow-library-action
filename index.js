@@ -9,7 +9,7 @@ const flowLibraryUrl = 'https://flows.nodered.org/add/node';
 
 (async () => {
     try {
-        const packageName = core.getInput('package-name');
+        const packageName = core.getInput('package-name') || core.getInput('package_name');
         if (packageName === undefined || packageName === '') {
             core.setFailed("No package name provided.");
             return;
