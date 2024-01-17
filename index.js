@@ -1,7 +1,6 @@
 const core = require('@actions/core');
 const github = require('@actions/github');
-const got = require('got');
-//import got from 'got';
+//const got = require('got');
 const {parse} = require("node-html-parser");
 const {CookieJar} = require('tough-cookie');
 
@@ -15,6 +14,7 @@ const flowLibraryUrl = 'https://flows.nodered.org/add/node';
             return;
         }
         try {
+            const { got } = await import("got");
             const cookieJar = new CookieJar();
             const response = await got(flowLibraryUrl, {cookieJar});
             const root = parse(response.body);
