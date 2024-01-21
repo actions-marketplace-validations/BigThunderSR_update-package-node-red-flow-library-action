@@ -7,6 +7,10 @@
     "Renovate",
     "dependencies"
   ],
+  "npm": {
+    "minimumReleaseAge": "3 days",
+    "rangeStrategy": "auto"
+  },
   "packageRules": [
     { 
      "matchManagers": ["npm"],
