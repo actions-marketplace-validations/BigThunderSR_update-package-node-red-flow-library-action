@@ -9,7 +9,7 @@
   ],
   "npm": {
     "minimumReleaseAge": "3 days",
-    "rangeStrategy": "auto"
+    "rangeStrategy": "bump"
   },
   "packageRules": [
     { 
