@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "test": "INPUT_PACKAGE_NAME=node-red-contrib-onstar2 jest test/updateflow.test.js"
+    "test": "jest test/updateflow.test.js"
   },
   "keywords": [
     "node-red",
