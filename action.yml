@@ -6,6 +6,9 @@ inputs:
     description: 'The name of the package'
     required: true
     default: ''
+  delay-run-ms:
+    required: false
+    description: 'The delay before running the action to update the flow in milliseconds'
 outputs:
   result:
     description: 'The result of update'
