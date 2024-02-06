@@ -12,7 +12,7 @@ This is an updated version of [Zehir/update-package-node-red-flow-library-action
 
 ### `delay-run-ms` - Available Starting at v1.3.0
 
-**Optional** The delay before running the action to update the flow in millisecond. Default `0`.
+**Optional** The delay before running the action to update the flow in milliseconds. Default `0`.
 
 ## Outputs
 
