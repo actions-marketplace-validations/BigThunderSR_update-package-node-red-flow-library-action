@@ -10,6 +10,10 @@ This is an updated version of [Zehir/update-package-node-red-flow-library-action
 
 **Required** The name of the package. Default `""`.
 
+### `delay-run-ms` - Available Starting at v1.3.0
+
+**Optional** The delay before running the action to update the flow in millisecond. Default `0`.
+
 ## Outputs
 
 ### `result`
@@ -46,5 +50,6 @@ jobs:
         continue-on-error: true
         with:
           package-name: 'node-red-contrib-onstar2'
+          delay-run-ms: 5000
 
 ```
