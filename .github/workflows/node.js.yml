@@ -30,4 +30,4 @@ jobs:
     - run: npm ci
     - run: npm run build --if-present
     - run: npm test
-    - run: bash <(curl -Ls https://coverage.codacy.com/get.sh)
+    - run: bash <(curl -Ls https://coverage.codacy.com/get.sh) report --project-token ${{ secrets.CODACY_PROJECT_TOKEN }}
