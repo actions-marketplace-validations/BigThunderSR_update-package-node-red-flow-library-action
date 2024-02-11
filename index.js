@@ -39,7 +39,7 @@ setTimeout(function () {
                     let result = response2.body.trim();
                     if (result.substr(1, 8 + packageName.length) === 'node/' + packageName + '?m=') {
                         try {
-                            let msg = atob(result.substr(9 + packageName.length));
+                            let msg = Buffer.from(data, result.substr(9 + packageName.length));
                             console.log(`result = "${msg}"`);
                             core.setOutput('result', msg);
                         } catch (e) {
