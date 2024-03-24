@@ -1,6 +1,6 @@
-name: 'Update Node-Red flow-library (Fork)'
+name: 'Update Node-RED flow-library (Fork)'
 author: 'BigThunderSR'
-description: 'Update or add a Node-Red package on the Node-Red flow library (flows.nodered.org).'
+description: 'Update or add a Node-RED package on the Node-RED flow library (flows.nodered.org).'
 inputs:
   package-name:
     description: 'The name of the package'
