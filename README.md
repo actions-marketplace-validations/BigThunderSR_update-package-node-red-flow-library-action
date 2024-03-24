@@ -1,4 +1,4 @@
-# Update Node-Red flow-library
+# Update Node-RED flow-library
 
 Update or add a Node-Red package on the Node-Red flow library (flows.nodered.org).
 
