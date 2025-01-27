@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "test": "nyc --useSpawnWrap jest --reporter=text --reporter=lcov test/updateflow.test.js"
+    "test": "nyc jest --reporter=text --reporter=lcov test/updateflow.test.js"
   },
   "keywords": [
     "node-red",
