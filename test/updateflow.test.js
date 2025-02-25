@@ -43,4 +43,20 @@ describe('Running Tests', () => {
     //console.log(myResult.output.toString());
     expect(myResult.output.toString().includes('Module already at latest version' && 'Delaying for 2000 ms')).toBeTruthy();
   });
+
+  test('Running should fail since package name not found - No Delay', async () => {
+    //console.log('Running test: Running should fail since package name not found');
+    const envVars = Object.assign({}, process.env, { INPUT_PACKAGE_NAME: 'node-red-contrib-onstar3' });
+    const myResult = spawnSync('npm run start', { stdio: "pipe", shell: true, env: envVars });
+    //console.log(myResult.output.toString());
+    expect(myResult.output.toString().includes('no stable published version')).toBeTruthy();
+  });
+
+  test('Running should fail since package name not found - With 500 ms Delay', async () => {
+    //console.log('Running test: Running should fail since package name not found');
+    const envVars = Object.assign({}, process.env, { INPUT_PACKAGE_NAME: 'node-red-contrib-onstar3', INPUT_DELAY_RUN_MS: 500 });
+    const myResult = spawnSync('npm run start', { stdio: "pipe", shell: true, env: envVars });
+    //console.log(myResult.output.toString());
+    expect(myResult.output.toString().includes('no stable published version' && 'Delaying for 500 ms')).toBeTruthy();
+  });
 });
