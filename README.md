@@ -1,6 +1,6 @@
-# Update Node-Red flow-library
+# Update Node-RED flow-library
 
-Update or add a Node-Red package on the Node-Red flow library (flows.nodered.org).
+Update or add a Node-RED package on the Node-RED flow library (flows.nodered.org).
 
 This is an updated version of [Zehir/update-package-node-red-flow-library-action](https://github.com/Zehir/update-package-node-red-flow-library-action).
 
@@ -9,6 +9,10 @@ This is an updated version of [Zehir/update-package-node-red-flow-library-action
 ### `package-name`
 
 **Required** The name of the package. Default `""`.
+
+### `delay-run-ms` - Available Starting at v1.3.0
+
+**Optional** The delay before running the action to update the flow in milliseconds. Default `0`.
 
 ## Outputs
 
@@ -33,7 +37,7 @@ jobs:
       - uses: actions/checkout@v1
       - uses: actions/setup-node@v1
         with:
-          node-version: 18.x
+          node-version: 22.x
       - run: npm install
       - run: npm test
       - id: publish
@@ -41,10 +45,11 @@ jobs:
         with:
           token: ${{ secrets.NPM_TOKEN }}
       - if: steps.publish.outputs.type != 'none'
-        name: Update Node-Red flow-library
-        uses: BigThunderSR/update-package-node-red-flow-library-action-fork@v1.1.0
+        name: Update Node-RED flow-library
+        uses: BigThunderSR/update-package-node-red-flow-library-action@v1.3.15
         continue-on-error: true
         with:
           package-name: 'node-red-contrib-onstar2'
+          delay-run-ms: 5000
 
 ```

@@ -1,16 +1,19 @@
-name: 'Update Node-Red flow-library (Fork)'
+name: 'Update Node-RED flow-library (Fork)'
 author: 'BigThunderSR'
-description: 'Update or add a Node-Red package on the Node-Red flow library (flows.nodered.org).'
+description: 'Update or add a Node-RED package on the Node-RED flow library (flows.nodered.org).'
 inputs:
   package-name:
     description: 'The name of the package'
     required: true
     default: ''
+  delay-run-ms:
+    required: false
+    description: 'The delay before running the action to update the flow in milliseconds'
 outputs:
   result:
     description: 'The result of update'
 runs:
-  using: 'node18'
+  using: 'node20'
   main: 'index.js'
 branding:
   color: 'red'
