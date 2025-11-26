@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "test": "nyc --useSpawnWrap jest --reporter=text --reporter=lcov test/updateflow.test.js"
+    "test": "c8 --reporter=lcov --reporter=text node --test test/*.test.js"
   },
   "keywords": [
     "node-red",
@@ -32,12 +32,10 @@
     "@actions/core": "^1.11.1",
     "@actions/github": "^6.0.1",
     "got": "^14.6.5",
-    "node-fetch": "^3.3.2",
     "node-html-parser": "^7.0.1",
     "tough-cookie": "^6.0.0"
   },
   "devDependencies": {
-    "jest": "^30.2.0",
-    "nyc": "^17.1.0"
+    "c8": "^10.1.3"
   }
 }
